@@ -15,7 +15,7 @@ export def --env --wrapped main [
 def --wrapped switch-inner [
     --executable-path: path
     ...args
-]: nothing -> record<kubeconfig?: path, context?: string, exit_code?: int> {
+] {
   let opts = []
 
   let executable_path = ($executable_path | default $default_executable_path)
